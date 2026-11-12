@@ -59,7 +59,7 @@ javac -d out src/main/java/*.java
 java -cp out LendingTracker
 ```
 
-`legacy/LendingTracker.java` is the original program, kept so the two can be compared side by side.
+`legacy/LendingTracker.java` The path to the original program, kept so the two can be compared side by side.
 
 ## Structure
 
