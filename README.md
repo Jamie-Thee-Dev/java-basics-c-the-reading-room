@@ -1,47 +1,6 @@
 # The Reading Room — Community Library Lending Tracker
 
-This is the starter repository for the **Java Basics** applied lab. Read the lab
-brief alongside this repository; it explains the business, what you are being
-asked to deliver, and how your work is assessed.
-
-## What this is
-
-A small program The Reading Room uses to track what is borrowed. It works, but it has become risky to change. Your task is to diagnose it
-and rebuild it well — **not** to change what it does, but to make it safe to
-change and impossible to leave in an invalid state.
-
-## Running it
-
-The program is plain Java (no external dependencies). You need JDK 21.
-
-**With Maven:**
-
-```bash
-mvn compile
-mvn exec:java -Dexec.mainClass=LendingTracker
-```
-
-**Or directly with the JDK:**
-
-```bash
-javac -d target/classes src/main/java/LendingTracker.java
-java -cp target/classes LendingTracker
-```
-
-Run it first, before you change anything, so you can see how it currently
-behaves. Look carefully at the end-of-day report.
-
-## What to hand in
-
-See the lab brief for the full list: a written diagnosis, your rebuilt version
-(behaving exactly as the original does today), a short note on your key design
-decisions, and one improvement beyond the brief. You will talk through your work
-in a live review.
-
-#
-# Additional Context
-
-A rebuild of the volunteer-written lending tracker. It does what the original did, with one change: an item can only ever be on one loan at a time. The written diagnosis and the first design sketch are in `DIAGNOSIS.md`.
+A rebuild of the volunteer-written lending tracker. It does what the original did, with one change: an item can only ever be on one loan at a time. The written diagnosis and the first design sketch are in `DIAGNOSIS.md`, which was committed before any code changed.
 
 ## Running it
 
@@ -59,7 +18,7 @@ javac -d out src/main/java/*.java
 java -cp out LendingTracker
 ```
 
-`legacy/LendingTracker.java` The path to the original program, kept so the two can be compared side by side.
+`legacy/LendingTracker.java` is the original program, kept so the two can be compared side by side.
 
 ## Structure
 
@@ -196,7 +155,7 @@ Two things behave differently from the original, both on purpose. Returning an i
 
 ## Improvement beyond the brief: an automated test suite
 
-The tests in `src/test` do three jobs.
+The tests in `src/test/java/` do three jobs.
 
 - They lock in the loan-period table and the original output, so a volunteer who changes a rule sees at once if something else moved. The volunteers' fear is that one change breaks another, and this answers it directly.
 - They protect the rule the business cares about most. Tests cover a refused double borrow, a refused borrow leaving no trace, re-lending after a return, and returns closing only the right loan. I removed the guard from `borrow` on a scratch copy and the three tests for that rule failed.
