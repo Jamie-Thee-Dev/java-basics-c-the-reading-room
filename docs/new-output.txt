@@ -1,0 +1,11 @@
+Lent "Things Fall Apart" to Kofi Mensah for 14 days
+Lent "French Audio Course" to Ama Owusu for 14 days
+Returned "French Audio Course"
+Cannot lend "Things Fall Apart" to Ama Owusu: already on loan to Kofi Mensah
+
+=== The Reading Room - end of day ===
+Items:
+  "Things Fall Apart" (BOOK): ON_LOAN - with Kofi Mensah
+  "French Audio Course" (AUDIO_KIT): AVAILABLE
+Active loans:
+  Loan #1: "Things Fall Apart" -> Kofi Mensah
