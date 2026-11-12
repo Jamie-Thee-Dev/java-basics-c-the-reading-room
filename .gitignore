@@ -2,6 +2,8 @@
 target/
 *.class
 
+junit.jar
+
 # IDE
 .idea/
 .vscode/
